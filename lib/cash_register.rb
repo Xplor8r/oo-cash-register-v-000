@@ -11,17 +11,11 @@ class CashRegister
     @items = []
   end
 
-  def add_item(title, price, quantity = 0)
-    if quantity > 1
+  def add_item(title, price, quantity = 1)
       self.total += price * quantity
       quantity.times do
         @items << title
-      end
       self.last_transaction = price * quantity
-    else
-      self.total += price
-      @items << title
-      self.last_transaction = price
     end
   end
 
