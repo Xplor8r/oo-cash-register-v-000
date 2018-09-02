@@ -18,6 +18,7 @@ class CashRegister
         @items << title
       end
       self.last_transaction = price * quantity
+      binding.pry
     else
       self.total += price
       @items << title
