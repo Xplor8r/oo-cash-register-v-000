@@ -22,8 +22,9 @@ class CashRegister
       @items << title
     end
     self.last_transaction = price * quantity
+      binding.pry
   end
-  binding.pry
+
   def apply_discount
     if @discount != 0
       discount_total = self.total - (self.total*0.2).round
