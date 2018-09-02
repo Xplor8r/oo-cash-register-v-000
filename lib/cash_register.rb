@@ -18,13 +18,13 @@ class CashRegister
       self.total += price
       @items << title
     end
-    @total = 
+
   end
   
   def apply_discount
     if @discount != 0
-      discount_total = @total - (@total*0.2).round
-      @total = discount_total
+      discount_total = self.total - (self.total*0.2).round
+      self.total = discount_total
       "After the discount, the total comes to $#{discount_total}."
     else
       "There is no discount to apply."
