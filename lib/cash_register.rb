@@ -21,6 +21,7 @@ class CashRegister
     else
       self.total += price
       @items << title
+      self.last_transaction = price
     end
   end
 
@@ -33,7 +34,7 @@ class CashRegister
       "There is no discount to apply."
     end
   end
-
+  
   def void_last_transaction
   
   end
