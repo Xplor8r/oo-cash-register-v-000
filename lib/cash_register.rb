@@ -22,8 +22,7 @@ class CashRegister
       self.total += price
       @items << title
     end
-   
-     
+   binding.pry
   end
 
   def apply_discount
@@ -43,6 +42,6 @@ class CashRegister
     @total
   end
   def void_last_transaction
-    total - self.last_transaction
+  
   end
 end
