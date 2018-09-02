@@ -1,3 +1,6 @@
+require "pry"
+
+
 class CashRegister
   
   attr_accessor :total, :items, :discount, :last_transaction
@@ -20,7 +23,7 @@ class CashRegister
     end
     self.last_transaction = price * quantity
   end
-  
+  binding.pry
   def apply_discount
     if @discount != 0
       discount_total = self.total - (self.total*0.2).round
