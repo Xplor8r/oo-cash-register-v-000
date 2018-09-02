@@ -17,11 +17,12 @@ class CashRegister
       quantity.times do
         @items << title
       end
+      self.last_transaction = price * quantity
     else
       self.total += price
       @items << title
     end
-    self.last_transaction = price * quantity
+   
       binding.pry
   end
 
